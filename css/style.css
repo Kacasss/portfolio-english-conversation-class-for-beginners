@@ -1,0 +1,934 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Kaisei Opti', serif;
+  color: rgb(182, 49, 100);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p,
+a {
+  font-size: 1.2rem;
+}
+
+h1 a{
+  font-size: 2.0rem;
+}
+
+h2, span, a{
+  font-family: 'M PLUS 1', sans-serif;
+}
+
+.header {
+  position: relative;
+}
+
+#open-close {
+  display: none;
+}
+
+.wrapper {
+  height: 200px;
+  padding: 40px;
+  text-align: center;
+  background-image: url(../images/header_footer.jpg);
+  font-family: 'M PLUS 1', sans-serif;
+}
+
+.wrapper h1 {
+  display: inline;
+  font-family: 'M PLUS 1', sans-serif;
+}
+
+.wrapper h1:hover,
+.wrapper li:hover {
+  color: rgb(255, 220, 255);
+}
+
+.wrapper ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.wrapper li {
+  padding-right: 50px;
+}
+
+.wrapper li:last-of-type {
+  padding-right: 0;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.header-image {
+  text-align: center;
+  background-size: 100%;
+  background-position: center;
+  height: 200px;
+  line-height: 100px;
+  color: rgb(252, 161, 196);
+  text-shadow: 0 2px 20px rgb(255, 159, 196);
+  font-family: 'M PLUS 1', sans-serif;
+}
+
+#introduce-header-image {
+  background-image: url(../images/index_background_image1.jpg);
+}
+
+#course-header-image {
+  background-image: url(../images/index_background_image2.jpg);
+}
+
+#instructor-header-image {
+  background-image: url(../images/index_background_image3.jpg);
+}
+
+#price-header-image {
+  background-image: url(../images/index_background_image4.jpg);
+}
+
+#voice-header-image {
+  background-image: url(../images/index_background_image5.jpg);
+}
+
+#contact-header-image {
+  background-image: url(../images/index_background_image6.jpg);
+}
+
+.main {
+  background-image: url(../images/all_background.png);
+  background-position: top center;
+  background-size: cover;
+}
+
+.main-wrapper {
+  text-align: center;
+}
+
+.main-wrapper section{
+  padding-top: 70px;
+}
+
+.main-wrapper h2 {
+  padding-bottom: 10px;
+}
+
+.main-wrapper p {
+  padding-bottom: 10px;
+  line-height: 1.9;
+}
+
+.text-disappear {
+  position: relative;
+}
+
+#text-move {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 1rem;
+  width: 1000px;
+  text-align: center;
+}
+
+#text-move span {
+  opacity: 1;
+  font-size: 3rem;
+}
+
+span.disabled {
+  opacity: 0 !important;
+}
+
+.image-boxes {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: slideshow;
+  animation-duration: 36s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.slideshow:nth-of-type(2) {
+  animation-delay: 6s;
+}
+
+.slideshow:nth-of-type(3) {
+  animation-delay: 12s;
+}
+
+.slideshow:nth-of-type(4) {
+  animation-delay: 18s;
+}
+
+.slideshow:nth-of-type(5) {
+  animation-delay: 24s;
+}
+
+.slideshow:nth-of-type(6) {
+  animation-delay: 30s;
+}
+
+@keyframes slideshow {
+  0%{
+    opacity: 0;
+  }
+  5%{
+    opacity: 1;
+  }
+  11%{
+    opacity: 1;
+  }
+  21%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.talk img{
+  width: 50%;
+  margin-top: 50px;
+}
+
+.book-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-wrapper img {
+  width: 200px;
+  padding-bottom: 50px;
+}
+
+.button{
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.button a{
+  display: block;
+  background-image: url(../images/introduce_main_image4.png);
+  padding-bottom: 50px;
+  width: 60%;
+  line-height: 60px;
+  height: 60px;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button a:hover{
+  background: rgb(255, 74, 155);
+  color:rgb(255, 220, 255);
+  position: relative;
+  top: 5px;
+}
+
+.course-wrapper {
+  display: grid;
+  /* gap: 10px; */
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  padding: 50px 5% 0 10%;
+}
+
+.course img {
+  border: 3px solid rgb(255, 229, 238);
+  max-width: 80%;
+  cursor: pointer;
+}
+
+.course h2,
+.course p {
+  max-width: 80%;
+  background:rgb(255, 229, 238);
+  text-align: center;
+  padding: 10px;
+}
+
+.course h2 {
+  padding-bottom: 10px;
+}
+
+.course p {
+  margin-bottom: 50px;
+}
+
+.instructor-wrapper {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  padding: 50px 0;
+}
+
+.instructor {
+  display: flex;
+  margin: 20px;
+  border: 3px solid rgb(255, 229, 238);
+}
+
+.instructor:first-of-type {
+  margin-right: 30px;
+}
+
+.instructor img{
+  max-width: 50%;
+}
+
+.instructor-text  {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: rgb(255, 229, 238);
+}
+
+.instructor-text h2 {
+  padding-bottom: 10px;
+}
+
+.price-wrapper {
+  text-align: center;
+  padding: 50px;
+}
+
+.price-wrapper > h2 {
+  margin-bottom: 50px;
+}
+
+.price-wrapper span {
+  color: rgb(241, 146, 143);
+}
+
+.price-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-box img{
+  width: 400px;
+}
+
+.price-section section {
+  margin-bottom: 50px;
+}
+
+.price-section h2,
+.price-section h3 {
+  background:rgb(255, 229, 238);
+  border-radius: 5px;
+  padding: 15px;
+
+}
+
+.price-section p {
+  padding: 20px;
+  background:white;
+  border-radius: 5px;
+  border: 5px dashed rgb(255, 229, 238);
+}
+
+.voice-wrapper {
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 50px 60px;
+}
+
+.response {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.response:last-of-type {
+  margin-bottom: 0px;
+}
+
+.response h2 {
+  background:rgb(255, 229, 238);
+  padding: 20px;
+}
+
+.response p {
+  padding: 20px;
+  border: 5px dashed rgb(255, 229, 238);
+}
+
+.response h2,
+.response p {
+  position: relative;
+  padding-left: 40px;
+}
+
+.response h2::before,
+.response p::before {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.response h2::before {
+  content: 'Q.';
+}
+
+.response p::before {
+  content: 'A.';
+}
+
+.contact-wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.contact-description {
+  margin-bottom: 50px;
+  border: 3px double rgb(255, 175, 203);
+  padding: 20px;
+}
+
+.contact-wrapper > section {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-image {
+  max-width: 25%;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+.contact-number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(255, 229, 238);
+  max-width: 400px;
+  width: 400px;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.contact-number span {
+  font-size: 2rem;
+  cursor: pointer;
+  color: blue;
+}
+
+.contact-number span:hover {
+  color: rgb(255, 112, 176);
+  position: relative;
+  top: 2px;
+}
+
+.contact-number h2 {
+  margin-bottom: 20px;
+}
+
+.contact-number p {
+  margin-top: 20px;
+}
+
+.contact-form table{
+  margin-top: 50px;
+}
+
+.contact-form th {
+  text-align: center;
+  vertical-align: middle;
+  background-image: url(../images/contact_form_image2.png);
+}
+
+.lesson {
+  text-align: center;
+}
+
+.contact-form label{
+  padding-right: 20px;
+}
+
+.contact-form th,
+.contact-form td{
+  border: 1px solid rgb(243, 187, 187);
+  width: 300px;
+  max-width: 300px;
+  padding: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form input[type="date"],
+.contact-form select[name="time"],
+.contact-form select[name="level"] {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="date"]:focus,
+.contact-form select[name="time"]:focus,
+.contact-form select[name="level"]:focus{
+  outline: 0;
+}
+
+.contact-form select[name="time"]:hover,
+.contact-form select[name="level"]:hover {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.contact-form textarea {
+  outline: 0;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  text-align: left;
+}
+
+.contact-form input[type="submit"],
+.contact-back {
+  margin-right: 5px;
+}
+
+.contact-form input[type="submit"],
+.contact-form input[type="reset"],
+.contact-back,
+.contact-post {
+  display: inline-block;
+  text-align: center;
+  width: 70px;
+  height: 50px;
+  box-shadow: 0 6px 0 rgb(255, 112, 176);
+  margin-top: 20px;
+  background-image: url(../images/contact_form_image2.png);
+  font-weight: bold;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover,
+.contact-form input[type="reset"]:hover,
+.contact-back:hover,
+.contact-post:hover {
+  position: relative;
+  top: 6px;
+  box-shadow: none;
+}
+
+.testConfirm,
+.testPost {
+  margin: 0 auto;
+  width: 800px;
+  height: 600px;
+  padding: 50px 50px 0px 50px;
+  line-height: 2;
+  /* text-align: center; */
+}
+
+.footer p{
+  margin-top: 30px;
+}
+
+.footer small {
+  font-size: 1rem;
+}
+
+select {
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+select::-ms-expand {
+  display: block;
+}
+
+@media(max-width: 1050px) {
+  #text-move {
+    letter-spacing: 0.5rem;
+    width: 800px;
+  }
+  
+  #text-move span {
+    font-size: 2rem;
+  }
+
+  .wrapper {
+    height: 250px;
+  }
+
+  .wrapper ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: flex-start;
+  }
+  
+  .image-boxes {
+    height: 600px;
+  }
+
+  .wrapper li {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .book-wrapper img{
+    width: 150px;
+  }
+
+  .instructor-wrapper {
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .instructor:first-of-type {
+    margin-bottom: 50px;
+    margin-right: 20px;
+  }
+  
+  .instructor img{
+    max-width: 50%;
+  }
+
+  .price-box img{
+    width: 300px;
+  }
+
+  .voice-wrapper {
+    width: calc(100% - 20px);
+  }
+
+  .instructor-text p{
+    padding: 0;
+    margin: 0;
+  }
+
+  .price-section section {
+    width: 100%;
+  }
+
+  .testConfirm,
+  .testPost {
+    max-width: 600px;
+  }
+}
+
+@media(max-width: 650px) {
+  #text-move {
+    letter-spacing: 0.2rem;
+    width: 500px;
+  }
+  
+  #text-move span {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  p,
+  a {
+    font-size: 1rem;
+  }
+  
+  h1 a{
+    font-size: 1.5rem;
+  }
+
+  .wrapper {
+    height: 350px;
+  }
+
+  .slideshow {
+    width: 100%;
+  }
+
+  #hamburger {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 4px;
+    z-index: 2;
+    background-image: url(../images/header_footer.jpg);
+  }
+
+  #hamburger span {
+    display: block;
+    position: absolute;
+    left: 5px;
+    width: 40px;
+    height: 3px;
+    background: white;
+    border-radius: 4px;
+  }
+
+  #line1 {
+    top: 10px;
+  }
+
+  #line2 {
+    top: 23px;
+  }
+
+  #line3 {
+    bottom: 10px;
+  }
+
+  .main {
+    background-image: none;
+  }
+
+  .main-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main-wrapper p{
+    line-height: 1.5;
+  }
+
+  .talk img{
+    width: 90%;
+  }
+
+  .header {
+    padding-top: 80px;
+    position: fixed;
+    right: -1000px;
+    z-index: 1;
+    height: 100vh;
+    transition: all 2s 0s ease;
+  }
+
+  #open-close:checked ~ .header{
+    transition: all 1s 0s ease;
+    transform: translate(-1000px);
+    height: 100vh;
+  }
+
+  .footer {
+    height: auto;
+    padding-top: 20px;
+  }
+
+  .wrapper ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .book-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px;
+  }
+
+  .book-column {
+    display: flex;
+    justify-content: center;
+  }
+
+  .book-column img {
+    width: 40%;
+  }
+
+  .button a {
+    width: 85%;
+    padding: 0;
+  }
+
+  .image-boxes {
+    height: 400px;
+  }
+
+  .course-wrapper {
+    padding-left: 20%;
+  }
+
+  .instructor {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .instructor img{
+    max-width: 100%;
+  }
+
+  .price-box {
+    flex-direction: column;
+  }
+
+  .price-section  section{
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .voice-wrapper {
+    max-width: 100%;
+    padding: 50px 0;
+  }
+
+  .response {
+    position: relative;
+  }
+
+  .response h2 {
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .response h2::after {
+    content: '+';
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    transition: transform 0.5s;
+  }
+
+  h2.appear::after {
+    transform: rotate(45deg);
+  }
+
+  h2.appear + p {
+    display: block;
+    animation: 1s fadeIn;
+  }
+
+  .response p {
+    display: none;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .contact-wrapper {
+    padding: 20px;
+  }
+
+  .contact-number {
+    max-width: 100%;
+    width: 90%;
+  }
+
+  .contact-wrapper > section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .contact-image {
+    max-width: 60%;
+    margin-top: 50px;
+  }
+
+  .contact-form th,
+  .contact-form td{
+    width: 400px;
+    max-width: 400px;
+  }
+
+  .contact-form table,
+  .contact-form tr,
+  .contact-form th,
+  .contact-form td{
+    display: block;
+  }
+
+  .footer ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+  }
+
+  .footer p{
+    padding-top: 10px;
+  }
+
+  .footer small {
+    font-size: 0.8rem;
+  }
+
+  select {
+    padding: 0 10px;
+  }
+
+  .testConfirm,
+  .testPost {
+    width: 100%;
+    height: 540px;
+  }
+
+  .testPost {
+    height: 650px;
+  }
+
+  .testPost p {
+    padding-top: 100px;
+  }
+}
+
+@media(max-width: 450px) {
+  #text-move {
+    letter-spacing: 0.1rem;
+    width: 300px;
+  }
+  
+  #text-move span {
+    font-size: 1rem;
+  }
+
+  .contact-form th,
+  .contact-form td{
+    width: 300px;
+    max-width: 300px;
+  }
+}
